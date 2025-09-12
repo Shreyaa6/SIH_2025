@@ -103,6 +103,103 @@
 .btn.primary .arrow { background: rgba(0,0,0,0.18); color: #0a1f0f; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 999px; }
 .btn.secondary { background: rgba(255,255,255,0.9); color: #0a1f0f; }
 
+/* Footer Styles */
+.footer {
+  background: #1f2937;
+  color: #f9fafb;
+  padding: 30px 0 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-icon {
+  background: #84cc16;
+  color: #0a1f0f;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.footer-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f9fafb;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.footer-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #84cc16;
+}
+
+.footer-bottom {
+  border-top: 1px solid #374151;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #9ca3af;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Footer Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
 /* So content never hugs edges on very small screens */
 @media (max-width: 380px) {
   .title { font-size: 40px; }

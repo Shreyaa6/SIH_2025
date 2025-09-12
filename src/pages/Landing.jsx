@@ -42,6 +42,31 @@ function Landing() {
           </div>
         </main>
       </div>
+
+      {/* Footer Section */}
+      <footer className="footer">
+        <div className="footer-container">
+          <div className="footer-brand">
+            <div className="footer-logo">
+              <div className="footer-icon">S</div>
+              <span className="footer-name">Synopsis</span>
+            </div>
+          </div>
+          
+          <div className="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#terms">Terms</a>
+          </div>
+        </div>
+        
+        <div className="footer-bottom">
+          <p>&copy; 2024 Synopsis. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
