@@ -1,0 +1,110 @@
+/* Landing page styles kept separate as requested */
+* { box-sizing: border-box; }
+
+.landing {
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.35);
+  min-height: 100vh;
+  width: 100%;
+  backdrop-filter: saturate(120%) blur(0px);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  color: #e8f5e9;
+}
+
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand-icon {
+  background: rgba(163, 230, 53, 0.9);
+  color: #0a1f0f;
+  width: 28px; height: 28px; border-radius: 8px;
+  display: grid; place-items: center;
+  font-weight: 700;
+}
+.brand-name { font-weight: 700; font-size: 18px; letter-spacing: 0.3px; }
+
+.nav-center { display: none; justify-content: center; }
+.nav-group {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  background: rgba(12, 20, 18, 0.88);
+  padding: 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.nav-item a {
+  color: #f1f5f3;
+  text-decoration: none;
+  padding: 10px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+}
+.nav-item.active a { background: #ffffff; color: #141a16; box-shadow: 0 1px 0 rgba(0,0,0,0.15) inset; }
+.home-dot { font-size: 14px; opacity: 0.9; }
+
+.nav-actions { display: none; gap: 16px; align-items: center; justify-self: end; }
+.login { color: #e8f5e9; text-decoration: none; opacity: 0.9; }
+.signup.outline {
+  background: transparent;
+  color: #e8f5e9;
+  padding: 8px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.6);
+  backdrop-filter: blur(2px);
+}
+
+@media (min-width: 900px) {
+  .nav-center { display: flex; }
+  .nav-actions { display: flex; }
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 24px 60px;
+  color: #f1f8f4;
+}
+.eyebrow { color: #c8e6c9; font-size: 14px; margin-bottom: 16px; }
+.title {
+  font-size: 56px;
+  line-height: 1.08;
+  letter-spacing: 0.2px;
+  margin: 0 0 18px 0;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.35);
+}
+.subtitle {
+  max-width: 700px;
+  font-size: 18px;
+  opacity: 0.95;
+  margin: 0 0 28px 0;
+}
+.hero-ctas { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.btn { text-decoration: none; border-radius: 999px; padding: 12px 18px; font-weight: 600; }
+.btn.primary { background: #84cc16; color: #0a1f0f; display: inline-flex; align-items: center; gap: 10px; }
+.btn.primary .arrow { background: rgba(0,0,0,0.18); color: #0a1f0f; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 999px; }
+.btn.secondary { background: rgba(255,255,255,0.9); color: #0a1f0f; }
+
+/* So content never hugs edges on very small screens */
+@media (max-width: 380px) {
+  .title { font-size: 40px; }
+}
+
