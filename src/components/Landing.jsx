@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import '../styles/Hero.css';
 import bgImage from '../assets/landing.png';
 
 function Landing({ onNavigate }) {

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import './App.css';
-import Landing from './pages/Landing';
-import About from './pages/About';
+import './styles/App.css';
+import Landing from './components/Landing';
+import About from './components/About';
+import Prediction from './components/Prediction';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('landing');
@@ -14,6 +15,7 @@ function App() {
     <div>
       {currentPage === 'landing' && <Landing onNavigate={navigateToPage} />}
       {currentPage === 'about' && <About onNavigate={navigateToPage} />}
+      {currentPage === 'prediction' && <Prediction onNavigate={navigateToPage} />}
     </div>
   );
 }

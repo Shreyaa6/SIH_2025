@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import './prediction.css';
+import React, { useState, useEffect, useCallback } from 'react';
+import '../styles/Prediction.css';
 
 function Prediction({ onNavigate }) {
   const [simulatorData, setSimulatorData] = useState({
@@ -47,7 +47,7 @@ function Prediction({ onNavigate }) {
   ];
 
   // Simulate yield prediction calculation
-  const calculateYield = () => {
+  const calculateYield = useCallback(() => {
     const { rainfall, temperature, soilType, cropType, region, irrigation } = simulatorData;
     
     // Base yield calculation (simplified algorithm)
@@ -97,11 +97,11 @@ function Prediction({ onNavigate }) {
       confidence: Math.round(confidence),
       riskLevel
     });
-  };
+  }, [simulatorData]);
 
   useEffect(() => {
     calculateYield();
-  }, [simulatorData]);
+  }, [simulatorData, calculateYield]);
 
   const handleInputChange = (field, value) => {
     setSimulatorData(prev => ({
