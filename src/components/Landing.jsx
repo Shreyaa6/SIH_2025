@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import bgImage from '../assets/landing.png';
 
-function Landing() {
+function Landing({ onNavigate }) {
   return (
     <div className="landing" style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="overlay">
@@ -14,15 +14,15 @@ function Landing() {
           <div className="nav-center">
             <ul className="nav-group">
               <li className="nav-item active"><a href="#home"><span className="home-dot">⌂</span> Home</a></li>
-              <li className="nav-item"><a href="#about">About Us</a></li>
-              <li className="nav-item"><a href="#reviews">Reviews</a></li>
+              <li className="nav-item"><a href="#about" onClick={(e) => { e.preventDefault(); onNavigate('about'); }}>About Us</a></li>
+              <li className="nav-item"><a href="#prediction" onClick={(e) => { e.preventDefault(); onNavigate('prediction'); }}>Prediction</a></li>
               <li className="nav-item"><a href="#products">Products</a></li>
               <li className="nav-item"><a href="#blog">Blog</a></li>
             </ul>
           </div>
           <div className="nav-actions">
             <a className="login" href="#signin">Sign In</a>
-            <a className="signup outline" href="#signup">Sign up Free</a>
+            <a className="signup outline" href="#signup">Sign up</a>
           </div>
         </nav>
 
